@@ -1,358 +1,126 @@
-# Parallax AI Internship — Week 2
+### \# Parallax AI Internship — RAG System
 
-## Chunking, Embeddings & Vector Database
+### 
 
-This week extends the Week 1 preprocessing pipeline by implementing text chunking, embedding generation, vector database storage, semantic search, and retrieval performance benchmarking.
+### A Retrieval-Augmented Generation (RAG) system built during the Parallax Labs AI/ML internship.
 
-## Overview
+### 
 
-The cleaned Wikipedia corpus produced in Week 1 is used as the input for the Week 2 pipeline.
+### The project retrieves relevant information from a Wikipedia-based knowledge base using ChromaDB and generates answers using an LLM through OpenRouter.
 
-The Week 2 workflow is:
+### 
 
-```text
-Cleaned Documents
-        ↓
-Text Chunking
-        ↓
-Sentence Embeddings
-        ↓
-ChromaDB Vector Database
-        ↓
-Semantic Search
-        ↓
-Retrieval Benchmarking
-```
+### \---
 
-## Dataset
+### 
 
-The Week 1 preprocessing pipeline produced:
+### \# Week 3 — LLM Integration \& Prompt Engineering
 
-- 5,998 cleaned Wikipedia documents
-- Stored in:
-  `data/processed/clean_corpus.parquet`
+### 
 
-The cleaned dataset contains the following columns:
+### \## Overview
 
-- `id`
-- `title`
-- `url`
-- `clean_text`
+### 
 
-## Text Chunking
+### Week 3 extends the Week 2 retrieval system by adding:
 
-A custom overlapping chunking strategy was implemented in:
+### 
 
-```text
-src/chunking.py
-```
+### \- LLM integration through OpenRouter
 
-Configuration:
+### \- Context injection
 
-```text
-Chunk size: 500 characters
-Overlap: 100 characters
-```
+### \- System prompt engineering
 
-The overlap helps preserve context when information appears near the boundary between two chunks.
+### \- Hallucination protection
 
-The chunking process generated:
+### \- Out-of-domain query handling
 
-```text
-Original documents: 5,998
-Total chunks: 186,349
-Average chunks per document: 31.07
-```
+### \- API error handling
 
-The generated chunks are stored in:
+### \- Token-limit handling
 
-```text
-data/processed/chunks.parquet
-```
+### \- Retrieval and generation latency measurement
 
-### Chunking Tests
+### \- Automated tests
 
-Chunking behavior was tested using pytest.
+### 
 
-The tests verify:
+### The goal is to create a more reliable RAG pipeline that answers questions using retrieved information instead of relying on unsupported information.
 
-- Empty text handling
-- Short documents
-- Multi-chunk documents
-- Correct overlap
-- Invalid chunk sizes
-- Invalid overlap values
+### 
 
-Run:
+### \---
 
-```bash
-python -m pytest tests/test_chunking.py -v
-```
+### 
 
-Result:
+### \# RAG Architecture
 
-```text
-6 passed
-```
+### 
 
-## Embedding Generation
+### The system follows this pipeline:
 
-Embeddings are generated using:
+### 
 
-```text
-sentence-transformers/all-MiniLM-L6-v2
-```
+### ```text
 
-Each text chunk is converted into a 384-dimensional embedding vector.
+### User Question
 
-Because embedding the complete 186,349-chunk corpus on CPU would require significant processing time, 20,000 chunks were selected for the Week 2 vector database implementation.
+### &#x20;     |
 
-Embedding configuration:
+### &#x20;     v
 
-```text
-Selected chunks: 20,000
-Embedding dimension: 384
-Batch size: 64
-```
+### Query Embedding
 
-Measured embedding performance:
+### &#x20;     |
 
-```text
-Total embedding time: 438.35 seconds
-Average embedding time per chunk: 21.9174 ms
-Embedding throughput: 45.63 chunks/second
-```
+### &#x20;     v
 
-Embeddings are stored in:
+### ChromaDB Retrieval
 
-```text
-data/processed/embeddings.npy
-```
+### &#x20;     |
 
-The corresponding chunks are stored in:
+### &#x20;     v
 
-```text
-data/processed/embedded_chunks.parquet
-```
+### Relevant Context
 
-Run embedding generation using:
+### &#x20;     |
 
-```bash
-python -m scripts.generate_embeddings
-```
+### &#x20;     v
 
-## ChromaDB
+### Relevance Check
 
-ChromaDB is used as the persistent vector database.
+### &#x20;     |
 
-The database contains:
+### &#x20;     +---- Not Relevant ----> Safe Refusal
 
-```text
-20,000 embedded Wikipedia chunks
-```
+### &#x20;     |
 
-The persistent database is stored in:
+### &#x20;     v
 
-```text
-data/chroma_db
-```
+### Context Injection
 
-The ChromaDB collection name is:
+### &#x20;     |
 
-```text
-wikipedia_chunks
-```
+### &#x20;     v
 
-To populate the database, run:
+### OpenRouter LLM
 
-```bash
-python -m scripts.ingest_chroma
-```
+### &#x20;     |
 
-## Semantic Search
+### &#x20;     v
 
-Semantic search was implemented using the same Sentence Transformer model used to generate the stored embeddings.
+### Generated Answer
 
-A user query is converted into an embedding and compared against the vectors stored in ChromaDB.
+### &#x20;     |
 
-Run:
+### &#x20;     v
 
-```bash
-python -m scripts.search_chroma
-```
+### Semantic Hallucination Check
 
-Example query:
+### &#x20;     |
 
-```text
-What is artificial intelligence?
-```
+### &#x20;     v
 
-Example top result:
+### Final Answer
 
-```text
-Artificial intelligence (AI) is the intelligence of machines or software,
-as opposed to the intelligence of humans or animals...
-```
-
-This demonstrates that the system can retrieve text based on semantic similarity rather than relying only on exact keyword matching.
-
-## Retrieval Performance
-
-A benchmark script was created to test several queries and measure retrieval latency.
-
-Run:
-
-```bash
-python -m scripts.benchmark_retrieval
-```
-
-Queries tested included:
-
-- What is artificial intelligence?
-- How does machine learning work?
-- What causes climate change?
-- Who was Albert Einstein?
-- What is the history of the internet?
-
-Measured performance:
-
-```text
-Queries tested: 5
-Average latency: 58.27 ms
-Minimum latency: 26.99 ms
-Maximum latency: 137.60 ms
-```
-
-Benchmark results are saved in:
-
-```text
-results/retrieval_benchmark.csv
-```
-
-## ChromaDB Edge Cases
-
-Several database edge cases were tested.
-
-The tests cover:
-
-- Empty collections
-- Adding documents successfully
-- Duplicate ID handling using `upsert`
-- Reading an empty collection safely
-
-Run:
-
-```bash
-python -m pytest tests/test_chroma_edge_cases.py -v
-```
-
-Result:
-
-```text
-4 passed
-```
-
-## Project Structure
-
-```text
-parallax-ai-internship/
-│
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   │   ├── clean_corpus.parquet
-│   │   ├── chunks.parquet
-│   │   ├── embedded_chunks.parquet
-│   │   └── embeddings.npy
-│   └── chroma_db/
-│
-├── scripts/
-│   ├── verify_env.py
-│   ├── create_chunks.py
-│   ├── generate_embeddings.py
-│   ├── ingest_chroma.py
-│   ├── search_chroma.py
-│   └── benchmark_retrieval.py
-│
-├── src/
-│   ├── preprocessing.py
-│   └── chunking.py
-│
-├── tests/
-│   ├── test_preprocessing.py
-│   ├── test_chunking.py
-│   └── test_chroma_edge_cases.py
-│
-├── results/
-│   └── retrieval_benchmark.csv
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
-
-## Running the Project
-
-Activate the virtual environment:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-Create chunks:
-
-```bash
-python -m scripts.create_chunks
-```
-
-Generate embeddings:
-
-```bash
-python -m scripts.generate_embeddings
-```
-
-Populate ChromaDB:
-
-```bash
-python -m scripts.ingest_chroma
-```
-
-Run semantic search:
-
-```bash
-python -m scripts.search_chroma
-```
-
-Run the retrieval benchmark:
-
-```bash
-python -m scripts.benchmark_retrieval
-```
-
-Run tests:
-
-```bash
-python -m pytest -v
-```
-
-## Notes and Limitations
-
-The complete cleaned corpus generated 186,349 chunks.
-
-For this Week 2 implementation, 20,000 chunks were embedded and indexed due to CPU processing constraints.
-
-As a result, semantic retrieval works well for topics present in the indexed subset, while some queries may return weaker results if the most relevant document was not included in the selected 20,000 chunks.
-
-A future improvement would be to embed the complete corpus using GPU acceleration or multiprocessing.
-
-## Week 2 Deliverable
-
-Week 2 successfully produced:
-
-- A tested text chunking pipeline
-- Sentence Transformer embeddings
-- Embedding performance measurements
-- A populated persistent ChromaDB database
-- Semantic search
-- Retrieval latency benchmarking
-- ChromaDB edge-case handling
