@@ -1,0 +1,542 @@
+[
+  {
+    "question": "What is artificial intelligence?",
+    "relevant_ids": [
+      "doc_278_chunk_0",
+      "doc_278_chunk_120"
+    ],
+    "candidates": [
+      {
+        "id": "doc_278_chunk_0",
+        "distance": 0.416,
+        "preview": "Artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals. It is also the field of study in computer science that develops and studies intelligent machi"
+      },
+      {
+        "id": "doc_278_chunk_4",
+        "distance": 0.699,
+        "preview": "based on statistics, operations research, and economics. AI also draws upon psychology, linguistics, philosophy, neuroscience and many other fields. Goals The general problem of simulating (or creating) intelligence has "
+      },
+      {
+        "id": "doc_278_chunk_121",
+        "distance": 0.7659,
+        "preview": "chine—and no other philosophical discussion is required, or may not even be possible. Another definition has been adopted by Google, a major practitioner in the field of AI. This definition stipulates the ability of syst"
+      },
+      {
+        "id": "doc_278_chunk_3",
+        "distance": 0.7681,
+        "preview": "ning, learning, natural language processing, perception, and support for robotics. General intelligence (the ability to solve an arbitrary problem) is among the field's long-term goals. To solve these problems, AI resear"
+      },
+      {
+        "id": "doc_278_chunk_122",
+        "distance": 0.7838,
+        "preview": "theory or paradigm has guided AI research for most of its history. The unprecedented success of statistical machine learning in the 2010s eclipsed all other approaches (so much so that some sources, especially in the bus"
+      },
+      {
+        "id": "doc_278_chunk_1",
+        "distance": 0.7941,
+        "preview": "ch engines (e.g., Google Search), recommendation systems (used by YouTube, Amazon, and Netflix), understanding human speech (such as Siri and Alexa), self-driving cars (e.g., Waymo), generative or creative tools (ChatGPT"
+      },
+      {
+        "id": "doc_278_chunk_120",
+        "distance": 0.7967,
+        "preview": "nce as \"the computational part of the ability to achieve goals in the world.\" Another AI founder, Marvin Minsky similarly defines it as \"the ability to solve hard problems\". These definitions view intelligence in terms o"
+      },
+      {
+        "id": "doc_278_chunk_97",
+        "distance": 0.8413,
+        "preview": "Eliezer Yudkowsky, who coined the term, argues that developing friendly AI should be a higher research priority: it may require a large investment and it must be completed before AI becomes an existential risk. Machines "
+      },
+      {
+        "id": "doc_278_chunk_119",
+        "distance": 0.8415,
+        "preview": "\". However, they are critical that the test compares machines to people. \"Aeronautical engineering texts,\" they wrote, \"do not define the goal of their field as making 'machines that fly so exactly like pigeons that they"
+      },
+      {
+        "id": "doc_278_chunk_130",
+        "distance": 0.8513,
+        "preview": "uperintelligence directly or to solve as many specific problems as possible (narrow AI) in hopes these solutions will lead indirectly to the field's long-term goals. General intelligence is difficult to define and diffic"
+      },
+      {
+        "id": "doc_278_chunk_24",
+        "distance": 0.8547,
+        "preview": "AI. Social intelligence Affective computing is an interdisciplinary umbrella that comprises systems that recognize, interpret, process or simulate human feeling, emotion and mood. For example, some virtual assistants are"
+      },
+      {
+        "id": "doc_278_chunk_152",
+        "distance": 0.8683,
+        "preview": "izations to serve as training data for such a purpose.\" (p. 82.) Johnston, John (2008) The Allure of Machinic Life: Cybernetics, Artificial Life, and the New AI, MIT Press. Gary Marcus, \"Artificial Confidence: Even the n"
+      },
+      {
+        "id": "doc_278_chunk_26",
+        "distance": 0.8775,
+        "preview": "al general intelligence should be able to solve a wide variety of problems with breadth and versatility similar to human intelligence. Tools AI research uses a wide variety of tools to accomplish the goals above. Search "
+      },
+      {
+        "id": "doc_278_chunk_116",
+        "distance": 0.8853,
+        "preview": "S alone and about 20% of new US Computer Science PhD graduates have specialized in \"AI\"; about 800,000 \"AI\"-related US job openings existed in 2022. In 2016, issues of fairness and the misuse of technology were catapulte"
+      },
+      {
+        "id": "doc_104_chunk_1",
+        "distance": 0.8932,
+        "preview": "n-making) and deduce valid inferences (referred to as automated reasoning), achieving automation eventually. Using human characteristics as descriptors of machines in metaphorical ways was already practiced by Alan Turin"
+      },
+      {
+        "id": "doc_278_chunk_18",
+        "distance": 0.8964,
+        "preview": "tically. It has been a part of AI from the beginning. There are several kinds of machine learning. Unsupervised learning analyzes a stream of data and finds patterns and makes predictions without any other guidance. Supe"
+      },
+      {
+        "id": "doc_104_chunk_0",
+        "distance": 0.9022,
+        "preview": "In mathematics and computer science, an algorithm () is a finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation. Algorithms are used as specifications "
+      },
+      {
+        "id": "doc_278_chunk_105",
+        "distance": 0.9222,
+        "preview": "recognized as \"AI\" was McCullouch and Pitts design for Turing-complete \"artificial neurons\" in 1943. The field of AI research was founded at a workshop at Dartmouth College in 1956. The attendees became the leaders of AI"
+      },
+      {
+        "id": "doc_278_chunk_98",
+        "distance": 0.9246,
+        "preview": "esolving ethical dilemmas. The field of machine ethics is also called computational morality, and was founded at an AAAI symposium in 2005. Other approaches include Wendell Wallach's \"artificial moral agents\" and Stuart "
+      },
+      {
+        "id": "doc_278_chunk_2",
+        "distance": 0.9253,
+        "preview": "rough multiple cycles of optimism followed by disappointment and loss of funding, but after 2012, when deep learning surpassed all previous AI techniques, there was a vast increase in funding and interest. The various su"
+      }
+    ]
+  },
+  {
+    "question": "What is machine learning?",
+    "relevant_ids": [
+      "doc_278_chunk_18",
+      "doc_278_chunk_39",
+      "doc_278_chunk_19"
+    ],
+    "candidates": [
+      {
+        "id": "doc_278_chunk_18",
+        "distance": 0.6718,
+        "preview": "tically. It has been a part of AI from the beginning. There are several kinds of machine learning. Unsupervised learning analyzes a stream of data and finds patterns and makes predictions without any other guidance. Supe"
+      },
+      {
+        "id": "doc_278_chunk_17",
+        "distance": 0.7527,
+        "preview": "A policy associates a decision with each possible state. The policy could be calculated (e.g. by iteration), be heuristic, or it can be learned. Game theory describes rational behavior of multiple interacting agents, and"
+      },
+      {
+        "id": "doc_278_chunk_122",
+        "distance": 0.7694,
+        "preview": "theory or paradigm has guided AI research for most of its history. The unprecedented success of statistical machine learning in the 2010s eclipsed all other approaches (so much so that some sources, especially in the bus"
+      },
+      {
+        "id": "doc_278_chunk_49",
+        "distance": 0.8122,
+        "preview": "machine learning technology is used in most of the essential applications of the 2020s, including: search engines (such as Google Search), targeting online advertisements, recommendation systems (offered by Netflix, YouT"
+      },
+      {
+        "id": "doc_278_chunk_39",
+        "distance": 0.8154,
+        "preview": "examples using supervised learning. Each pattern (also called an \"observation\") is labeled with a certain predefined class. All the observations combined with their class labels are known as a data set. When a new observ"
+      },
+      {
+        "id": "doc_278_chunk_40",
+        "distance": 0.8663,
+        "preview": "ymbolic machine learning algorithm. K-nearest neighbor algorithm was the most widely used analogical AI until the mid-1990s, and Kernel methods such as the support vector machine (SVM) displaced k-nearest neighbor in the"
+      },
+      {
+        "id": "doc_278_chunk_19",
+        "distance": 0.8914,
+        "preview": "ongs in) and regression (where the program must deduce a numeric function based on numeric input). In reinforcement learning the agent is rewarded for good responses and punished for bad ones. The agent learns to choose "
+      },
+      {
+        "id": "doc_278_chunk_75",
+        "distance": 0.9241,
+        "preview": "ips between inputs and outputs in deep neural networks and resulting complexity makes it difficult for even an expert to explain how they produced their outputs, making them a black box. There have been many cases where "
+      },
+      {
+        "id": "doc_278_chunk_0",
+        "distance": 0.9468,
+        "preview": "Artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals. It is also the field of study in computer science that develops and studies intelligent machi"
+      },
+      {
+        "id": "doc_278_chunk_71",
+        "distance": 0.9794,
+        "preview": "the same decisions based on these features as it would on \"race\" or \"gender\". Moritz Hardt said “the most robust fact in this research area is that fairness through blindness doesn't work.” Criticism of COMPAS highlighte"
+      },
+      {
+        "id": "doc_278_chunk_23",
+        "distance": 1.0066,
+        "preview": "ption Machine perception is the ability to use input from sensors (such as cameras, microphones, wireless signals, active lidar, sonar, radar, and tactile sensors) to deduce aspects of the world. Computer vision is the a"
+      },
+      {
+        "id": "doc_104_chunk_0",
+        "distance": 1.0091,
+        "preview": "In mathematics and computer science, an algorithm () is a finite sequence of rigorous instructions, typically used to solve a class of specific problems or to perform a computation. Algorithms are used as specifications "
+      },
+      {
+        "id": "doc_278_chunk_66",
+        "distance": 1.0132,
+        "preview": "ake decisions that can seriously harm people (as it can in medicine, finance, recruitment, housing or policing) then the algorithm may cause discrimination. Fairness in machine learning is the study of how to prevent the"
+      },
+      {
+        "id": "doc_278_chunk_38",
+        "distance": 1.0224,
+        "preview": "n networks, game theory and mechanism design. Classifiers and statistical learning methods The simplest AI applications can be divided into two types: classifiers (e.g. \"if shiny then diamond\"), on one hand, and controll"
+      },
+      {
+        "id": "doc_278_chunk_148",
+        "distance": 1.0572,
+        "preview": "hink about the Future of AI\", Foreign Affairs, vol. 98, no. 4 (July/August 2019), pp. 192–98. George Dyson, historian of computing, writes (in what might be called \"Dyson's Law\") that \"Any system simple enough to be unde"
+      },
+      {
+        "id": "doc_278_chunk_81",
+        "distance": 1.0589,
+        "preview": ", rather than the classification. Simple addition of these features can then make the classification (i.e. learning is used to create a scoring system classifier, which is transparent). Bad actors and weaponized AI A let"
+      },
+      {
+        "id": "doc_278_chunk_45",
+        "distance": 1.0605,
+        "preview": "learning uses several layers of neurons between the network's inputs and outputs. The multiple layers can progressively extract higher-level features from the raw input. For example, in image processing, lower layers may"
+      },
+      {
+        "id": "doc_278_chunk_20",
+        "distance": 1.065,
+        "preview": "at runs inputs through biologically inspired artificial neural networks for all of these types of learning. Computational learning theory can assess learners by computational complexity, by sample complexity (how much da"
+      },
+      {
+        "id": "doc_278_chunk_84",
+        "distance": 1.0657,
+        "preview": "can precisely target propaganda and misinformation for maximum effect; deepfakes and generative AI aid in producing misinformation; advanced AI can make authoritarian centralized decision making more competitive with lib"
+      },
+      {
+        "id": "doc_104_chunk_107",
+        "distance": 1.0699,
+        "preview": "hms, medical algorithms, machine learning, cryptography, data compression algorithms and parsing techniques. Fields tend to overlap with each other, and algorithm advances in one field may improve those of other, sometim"
+      }
+    ]
+  },
+  {
+    "question": "What is the capital of France?",
+    "relevant_ids": [],
+    "candidates": [
+      {
+        "id": "doc_31_chunk_2",
+        "distance": 1.0917,
+        "preview": "country by land and 11th-smallest by population. Its capital, Andorra la Vella, is the highest capital city in Europe, at an elevation of above sea level. The official language is Catalan, but Spanish, Occitan, and Frenc"
+      },
+      {
+        "id": "doc_17_chunk_2",
+        "distance": 1.0953,
+        "preview": "d the 32nd-most populous country in the world. The capital and largest city is Algiers, located in the far north on the Mediterranean coast. Algeria produced and is linked to many civilizations, empires and dynasties, in"
+      },
+      {
+        "id": "doc_31_chunk_1",
+        "distance": 1.1224,
+        "preview": "med by a charter in 1278. It is currently headed by two co-princes: the bishop of Urgell in Catalonia, Spain and the president of France. Its capital and largest city is Andorra la Vella. Andorra is the sixth-smallest st"
+      },
+      {
+        "id": "doc_31_chunk_131",
+        "distance": 1.234,
+        "preview": "ts in Europe Catalan Countries Christian states Countries in Europe Diarchies Duty-free zones of Europe Iberian Peninsula countries Important Bird Areas of Andorra Landlocked countries Member states of the Council of Eur"
+      },
+      {
+        "id": "doc_31_chunk_19",
+        "distance": 1.2386,
+        "preview": "the mediation of the king of Aragon, Peter III, between the bishop and the count, by the signing of the first paréage, which provided that Andorra's sovereignty be shared between the count of Foix (whose title would ulti"
+      },
+      {
+        "id": "doc_31_chunk_108",
+        "distance": 1.2599,
+        "preview": "a. The nearest railway station is Andorre-L'Hospitalet station east of Andorra which is on the -gauge line from Latour-de-Carol () southeast of Andorra, to Toulouse and on to Paris by the French high-speed trains. This l"
+      },
+      {
+        "id": "doc_186_chunk_0",
+        "distance": 1.2714,
+        "preview": "Azincourt (), historically known in English as Agincourt ( ), is a commune in the Pas-de-Calais department in northern France. It is situated north-west of Saint-Pol-sur-Ternoise on the D71 road between Hesdin and Fruges"
+      },
+      {
+        "id": "doc_17_chunk_1",
+        "distance": 1.2736,
+        "preview": "ography, with most of the population living in the fertile north and the Sahara dominating the geography of the south. Algeria covers an area of , making it the world's tenth largest nation by area, and the largest natio"
+      },
+      {
+        "id": "doc_17_chunk_67",
+        "distance": 1.279,
+        "preview": "s to settlers within French occupied cities. From 1848 until independence, France administered the whole Mediterranean region of Algeria as an integral part and département of the nation. One of France's longest-held ove"
+      },
+      {
+        "id": "doc_267_chunk_9",
+        "distance": 1.2813,
+        "preview": "llowing the Revolution, Broglie became part of the département of Eure. The family moved twice—in 1789/90 to Cherbourg, and in 1794 to Jacques's home town of Mathieu, where Madame Fresnel would spend 25 years as a widow,"
+      },
+      {
+        "id": "doc_31_chunk_104",
+        "distance": 1.2946,
+        "preview": "n now, the nearest major airports at Toulouse and Barcelona are both three hours' drive from Andorra. Andorra has a road network of , of which is unpaved. The two main roads out of Andorra la Vella are the CG-1 to the Sp"
+      },
+      {
+        "id": "doc_31_chunk_56",
+        "distance": 1.3035,
+        "preview": "eform of the organization, and after three days he took part in the parliamentary assembly of the Council of Europe to defend Andorra's linguistic rights and economy. In 2006 a monetary agreement with the European Union "
+      },
+      {
+        "id": "doc_31_chunk_107",
+        "distance": 1.3095,
+        "preview": "Airlines. Nearby airports located in Spain and France provide access to international flights for the principality. The nearest airports are at Perpignan, France ( from Andorra) and Lleida, Spain ( from Andorra). The lar"
+      },
+      {
+        "id": "doc_17_chunk_69",
+        "distance": 1.3178,
+        "preview": "20th century, the European share was almost a fifth of the population. The French government aimed at making Algeria an assimilated part of France, and this included substantial educational investments especially after 1"
+      },
+      {
+        "id": "doc_197_chunk_54",
+        "distance": 1.3263,
+        "preview": "f which are complicated, channel water to the main valleys which can experience flooding during the snowmelt season when rapid runoff causes debris torrents and swollen rivers. The rivers form lakes, such as Lake Geneva,"
+      },
+      {
+        "id": "doc_215_chunk_3",
+        "distance": 1.3289,
+        "preview": "and Leopold II, Holy Roman Emperor, issue the Declaration of Pillnitz, declaring the joint support of the Holy Roman Empire and Prussia for the French monarchy, agitating the French revolutionaries and contributing to th"
+      },
+      {
+        "id": "doc_198_chunk_4",
+        "distance": 1.3351,
+        "preview": "-class neighbourhood in Mondovi (present-day Dréan), in French Algeria. His mother, Catherine Hélène Camus (née Sintès), was French with Balearic Spanish ancestry. He never knew his father, Lucien Camus, a poor French ag"
+      },
+      {
+        "id": "doc_98_chunk_87",
+        "distance": 1.3362,
+        "preview": "blic existed in Vienna, Munich and other capitals. The opening of the Musée du Louvre during the French Revolution (in 1793) as a public museum for much of the former French royal collection certainly marked an important"
+      },
+      {
+        "id": "doc_133_chunk_173",
+        "distance": 1.347,
+        "preview": "al planning and the metropolitan public transport concessions. National capital Under the Dutch Constitution, Amsterdam is the capital of the Netherlands. Since the 1983 constitutional revision, the constitution mentions"
+      },
+      {
+        "id": "doc_17_chunk_115",
+        "distance": 1.3478,
+        "preview": "). Each province, district, and municipality is named after its seat, which is usually the largest city. The administrative divisions have changed several times since independence. When introducing new provinces, the num"
+      }
+    ]
+  },
+  {
+    "question": "What is the Apollo program?",
+    "relevant_ids": [
+      "doc_27_chunk_261",
+      "doc_56_chunk_9"
+    ],
+    "candidates": [
+      {
+        "id": "doc_55_chunk_143",
+        "distance": 0.8839,
+        "preview": "program was that it was one of the few government programs that had achieved something great. Drastic cuts, warned Caspar Weinberger, the deputy director of the Office of Management and Budget, might send a signal that \""
+      },
+      {
+        "id": "doc_56_chunk_114",
+        "distance": 0.937,
+        "preview": "d launch footage, and motion pictures taken in flight. Other documentaries include \"Race to the Moon\" (2005) as part of season 18 of American Experience and In the Shadow of the Moon (2007). Apollo's Daring Mission aired"
+      },
+      {
+        "id": "doc_55_chunk_40",
+        "distance": 0.9467,
+        "preview": "iteria: The site needed to be smooth, with relatively few craters; with approach paths free of large hills, tall cliffs or deep craters that might confuse the landing radar and cause it to issue incorrect readings; reach"
+      },
+      {
+        "id": "doc_55_chunk_49",
+        "distance": 0.9713,
+        "preview": "ter, and CSM-107 Columbia on January 23. There were several differences between Eagle and Apollo 10's LM-4 Snoopy; Eagle had a VHF radio antenna to facilitate communication with the astronauts during their EVA on the lun"
+      },
+      {
+        "id": "doc_56_chunk_9",
+        "distance": 0.9713,
+        "preview": "g from a position of equality—something spectacular, even if it could not be justified on military, economic, or scientific grounds. After consulting with his experts and advisors, he chose such a project: to land a man "
+      },
+      {
+        "id": "doc_55_chunk_27",
+        "distance": 0.9825,
+        "preview": "sured the prime and backup crews were apprised of changes. They developed procedures, especially those for emergency situations, so these were ready for when the prime and backup crews came to train in the simulators, al"
+      },
+      {
+        "id": "doc_27_chunk_261",
+        "distance": 0.9952,
+        "preview": "e 1960s and 1970s NASA program for orbiting and landing astronauts on the Moon was named after Apollo, by NASA manager Abe Silverstein: Genealogy See also Darrhon Dryad Epirus Family tree of the Greek gods Phoebus (disam"
+      },
+      {
+        "id": "doc_55_chunk_15",
+        "distance": 0.9959,
+        "preview": "logy, including metal–oxide–semiconductor field-effect transistors (MOSFETs) in the Interplanetary Monitoring Platform (IMP) and silicon integrated circuit (IC) chips in the Apollo Guidance Computer (AGC). Project Apollo"
+      },
+      {
+        "id": "doc_56_chunk_23",
+        "distance": 1.0133,
+        "preview": "ct of LM-3 being ready to fly in 1968. Indeed, it was possible that delivery would slip to February or March 1969. Following the original seven-step plan would have meant delaying the \"D\" and subsequent missions, and end"
+      },
+      {
+        "id": "doc_55_chunk_14",
+        "distance": 1.0291,
+        "preview": "descent stage for landing on the Moon, and an ascent stage to place the astronauts back into lunar orbit. This design meant the spacecraft could be launched by a single Saturn V rocket that was then under development. Te"
+      },
+      {
+        "id": "doc_55_chunk_16",
+        "distance": 1.0344,
+        "preview": "68, Apollo 7 evaluated the command module in Earth orbit, and in December Apollo 8 tested it in lunar orbit. In March 1969, Apollo 9 put the lunar module through its paces in Earth orbit, and in May Apollo 10 conducted a"
+      },
+      {
+        "id": "doc_55_chunk_148",
+        "distance": 1.0347,
+        "preview": "estination Moon: The Apollo 11 Mission. This included Space Center Houston from October 14, 2017, to March 18, 2018, the Saint Louis Science Center from April 14 to September 3, 2018, the Senator John Heinz History Cente"
+      },
+      {
+        "id": "doc_56_chunk_24",
+        "distance": 1.0362,
+        "preview": "he program on track despite the LM delay. Since the next CSM (designated as \"CSM-103\") would be ready three months before LM-3, a CSM-only mission could be flown in December 1968. Instead of repeating the \"C\" mission fli"
+      },
+      {
+        "id": "doc_111_chunk_15",
+        "distance": 1.0467,
+        "preview": "ari's off-campus research lab in Grass Valley, California, in 1978. Cyan gave it to Delman, who finished the design and first used it for Lunar Lander. Logg received Delman's modified board with five buttons, 13 sound ef"
+      },
+      {
+        "id": "doc_56_chunk_10",
+        "distance": 1.0473,
+        "preview": "ecialized spacecraft would land on the lunar surface. The Apollo spacecraft therefore had three primary components: a command module (CM) with a cabin for the three astronauts, and the only part that would return to Eart"
+      },
+      {
+        "id": "doc_56_chunk_20",
+        "distance": 1.0534,
+        "preview": "on landing. Apollo4 and Apollo6 were \"A\" missions, tests of the SaturnV launch vehicle using an uncrewed Block I production model of the command and service module (CSM) in Earth orbit. Apollo5 was a \"B\" mission, a test "
+      },
+      {
+        "id": "doc_56_chunk_21",
+        "distance": 1.0705,
+        "preview": "It had been decided as early as May 1967 that there would be at least four additional missions. Apollo8 was planned as the \"D\" mission, a test of the LM in a low Earth orbit in December 1968 by James McDivitt, David Scot"
+      },
+      {
+        "id": "doc_56_chunk_47",
+        "distance": 1.0748,
+        "preview": "is burn. Collins was the first CAPCOM on duty, and at 2hours, 27 minutes and 22 seconds after launch he radioed, \"Apollo8. You are Go for TLI.\" This communication meant that Mission Control had given official permission "
+      },
+      {
+        "id": "doc_56_chunk_61",
+        "distance": 1.0755,
+        "preview": "e crew decided to use the Data Storage Equipment (DSE), which could tape voice recordings and telemetry and dump them to Mission Control at high speed. After recording a description of Borman's illness they asked Mission"
+      },
+      {
+        "id": "doc_55_chunk_13",
+        "distance": 1.0781,
+        "preview": "1962 NASA head James Webb announced that lunar orbit rendezvous would be used and that the Apollo spacecraft would have three major parts: a command module (CM) with a cabin for the three astronauts, and the only part th"
+      }
+    ]
+  },
+  {
+    "question": "What is photosynthesis?",
+    "relevant_ids": [],
+    "candidates": [
+      {
+        "id": "doc_41_chunk_5",
+        "distance": 0.8567,
+        "preview": "gy sources and have limited or no photosynthetic apparatus. Some other heterotrophic organisms, such as the apicomplexans, are also derived from cells whose ancestors possessed plastids, but are not traditionally conside"
+      },
+      {
+        "id": "doc_41_chunk_4",
+        "distance": 0.9556,
+        "preview": "are phototrophic, although some are mixotrophic, deriving energy both from photosynthesis and uptake of organic carbon either by osmotrophy, myzotrophy, or phagotrophy. Some unicellular species of green algae, many golde"
+      },
+      {
+        "id": "doc_41_chunk_31",
+        "distance": 1.0578,
+        "preview": "ability of membranes, osmoregulation, turgor regulation, salt tolerance, cytoplasmic streaming, and the generation of action potentials. Phytohormones are found not only in higher plants, but in algae, too. Symbiotic alg"
+      },
+      {
+        "id": "doc_41_chunk_3",
+        "distance": 1.0622,
+        "preview": "an endosymbiotic red alga. Algae exhibit a wide range of reproductive strategies, from simple asexual cell division to complex forms of sexual reproduction. Algae lack the various structures that characterize land plants"
+      },
+      {
+        "id": "doc_41_chunk_36",
+        "distance": 1.0677,
+        "preview": "). These animals metabolize sugar and oxygen to obtain energy for their cell-building processes, including secretion of the exoskeleton, with water and carbon dioxide as byproducts. Dinoflagellates (algal protists) are o"
+      },
+      {
+        "id": "doc_1_chunk_37",
+        "distance": 1.0732,
+        "preview": "across both forest types is associated with maximum rates of photosynthesis because plants with high growth capacity display a greater fraction of their foliage for direct interception of incoming radiation in the upper "
+      },
+      {
+        "id": "doc_41_chunk_10",
+        "distance": 1.0967,
+        "preview": "r inhabitants of the eastern Mediterranean. It could be any color: black, red, green, or blue. The study of algae is most commonly called phycology (); the term algology is falling out of use. Classifications One definit"
+      },
+      {
+        "id": "doc_162_chunk_52",
+        "distance": 1.1207,
+        "preview": "ia use arsenite as fuel, which they oxidize to arsenate. The enzymes involved are known as arsenate reductases (Arr). In 2008, bacteria were discovered that employ a version of photosynthesis in the absence of oxygen wit"
+      },
+      {
+        "id": "doc_41_chunk_12",
+        "distance": 1.1255,
+        "preview": "representing reduced endosymbiotic cyanobacteria. However, the exact origin of the chloroplasts is different among separate lineages of algae, reflecting their acquisition during different endosymbiotic events. The table"
+      },
+      {
+        "id": "doc_41_chunk_0",
+        "distance": 1.1448,
+        "preview": "Algae (, ; : alga ) is an informal term for a large and diverse group of photosynthetic, eukaryotic organisms. It is a polyphyletic grouping that includes species from multiple distinct clades. Included organisms range f"
+      },
+      {
+        "id": "doc_41_chunk_13",
+        "distance": 1.207,
+        "preview": "rs that are no longer photosynthetic. Some retain plastids, but not chloroplasts, while others have lost plastids entirely. Phylogeny based on plastid not nucleocytoplasmic genealogy: Linnaeus, in Species Plantarum (1753"
+      },
+      {
+        "id": "doc_188_chunk_10",
+        "distance": 1.2086,
+        "preview": "th rays\". The capitulum, which often appears to be a single flower, is often referred to as a head. In some species, the entire head is able to pivot its floral stem in the course of the day to track the sun (like a \"sma"
+      },
+      {
+        "id": "doc_43_chunk_76",
+        "distance": 1.2401,
+        "preview": "o the producers of marsh gas in wetlands. The methane output of cattle and other herbivores, which can release 30 to 50 gallons per day, and of termites, is also due to methanogens. They also produce this simplest of all"
+      },
+      {
+        "id": "doc_41_chunk_11",
+        "distance": 1.2534,
+        "preview": "lorless Prototheca under Chlorophyta are all devoid of any chlorophyll. Although cyanobacteria are often referred to as \"blue-green algae\", most authorities exclude all prokaryotes, including cyanobacteria, from the defi"
+      },
+      {
+        "id": "doc_41_chunk_33",
+        "distance": 1.2559,
+        "preview": "ew from the Basidiomycota. In nature, they do not occur separate from lichens. It is unknown when they began to associate. One mycobiont associates with the same phycobiont species, rarely two, from the green algae, exce"
+      },
+      {
+        "id": "doc_41_chunk_18",
+        "distance": 1.2562,
+        "preview": "bacillariophytes, phaeophytes, pyrrhophytes (cryptophytes and dinophytes), euglenophytes, and chlorophytes. Later, many new groups were discovered (e.g., Bolidophyceae), and others were splintered from older groups: char"
+      },
+      {
+        "id": "doc_51_chunk_69",
+        "distance": 1.2574,
+        "preview": "in food, producing carbon dioxide (CO2) as a byproduct. Oxygen and carbon dioxide are exchanged in the lungs, and the body responds to changing energy demands by adjusting the rate of ventilation. For example, during per"
+      },
+      {
+        "id": "doc_41_chunk_62",
+        "distance": 1.2631,
+        "preview": "red a potential solution for world hunger problem. Two popular forms of algae are used in cuisine: Chlorella: This form of alga is found in freshwater and contains photosynthetic pigments in its chloroplast. It is high i"
+      },
+      {
+        "id": "doc_43_chunk_77",
+        "distance": 1.272,
+        "preview": "y photosynthesis. It is probable that our current deposits of natural gas were formed in a similar way. Fungi and plants Alkanes also play a role, if a minor role, in the biology of the three eukaryotic groups of organis"
+      },
+      {
+        "id": "doc_51_chunk_68",
+        "distance": 1.278,
+        "preview": "drolyze proteins and polysaccharides, as well as converting the inactive pro-enzyme, pepsinogen into the enzyme, pepsin. Some organisms produce acids for defense; for example, ants produce formic acid. Acid–base equilibr"
+      }
+    ]
+  }
+]

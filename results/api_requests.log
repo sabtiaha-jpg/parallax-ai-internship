@@ -1,0 +1,14 @@
+{"timestamp": "2026-10-17T09:17:13.761033+00:00", "request_id": "de8beabf-3ff3-49fa-b44f-ed0615645ab4", "method": "GET", "path": "/docs", "status_code": 200, "duration_ms": 2.91}
+{"timestamp": "2026-10-17T09:17:13.762539+00:00", "request_id": "6240d27f-b8df-4268-b5f9-0ab5497abc3c", "method": "GET", "path": "/docs", "status_code": 200, "duration_ms": 3.59}
+{"timestamp": "2026-10-17T09:17:13.762539+00:00", "request_id": "fdd97878-3431-4c65-b05e-dabd2637468e", "method": "GET", "path": "/", "status_code": 200, "duration_ms": 4.68}
+{"timestamp": "2026-10-17T09:17:13.762539+00:00", "request_id": "3679848f-bfcc-4fa8-863e-ffa9f7c635c7", "method": "GET", "path": "/", "status_code": 200, "duration_ms": 4.84}
+{"timestamp": "2026-10-17T09:17:19.528455+00:00", "request_id": "c5ab602b-ef55-46ab-bacb-b60b743c7f6e", "method": "GET", "path": "/docs", "status_code": 200, "duration_ms": 1.23}
+{"timestamp": "2026-10-17T09:17:19.796680+00:00", "request_id": "c345d4dd-7a0d-47c5-90e6-e1ce9470dbe1", "method": "GET", "path": "/openapi.json", "status_code": 200, "duration_ms": 11.55}
+{"timestamp": "2026-10-17T09:24:47.938487+00:00", "request_id": "1be71747-07b2-4be8-8bda-4a81ba4258f5", "method": "GET", "path": "/", "status_code": 200, "duration_ms": 3.93}
+{"timestamp": "2026-10-17T09:24:47.952492+00:00", "request_id": "8786836d-a825-4d71-b457-521c0dfdd657", "method": "GET", "path": "/health", "status_code": 200, "duration_ms": 1.42}
+{"timestamp": "2026-10-17T09:24:47.968487+00:00", "request_id": "da94d385-4764-4270-92bd-f40bbbce4f02", "method": "POST", "path": "/ask", "status_code": 200, "duration_ms": 3.74}
+{"timestamp": "2026-10-17T09:24:47.990015+00:00", "request_id": "d02c82a9-dc5e-48d4-b735-579535659bd0", "method": "POST", "path": "/ask", "status_code": 400, "duration_ms": 2.49}
+{"timestamp": "2026-10-17T09:24:48.010015+00:00", "request_id": "937949db-c716-4d71-a100-6943357e2c75", "method": "POST", "path": "/ask", "status_code": 422, "duration_ms": 4.54}
+{"timestamp": "2026-10-17T09:24:48.030095+00:00", "request_id": "c501b926-300e-4619-969b-d15ae9a0db86", "method": "POST", "path": "/ask", "status_code": 422, "duration_ms": 2.85}
+{"timestamp": "2026-10-17T09:24:48.049095+00:00", "request_id": "8274fb74-1a39-4f13-8ecc-bae8569d2c48", "method": "POST", "path": "/ask", "status_code": 200, "duration_ms": 3.26}
+{"timestamp": "2026-10-17T09:24:48.066095+00:00", "request_id": "91a0289b-9c34-47b6-9632-070d56961cfb", "method": "POST", "path": "/ask", "status_code": 500, "duration_ms": 3.42}

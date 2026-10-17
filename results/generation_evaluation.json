@@ -1,0 +1,59 @@
+{
+  "total_cases": 5,
+  "successful_cases": 5,
+  "mean_total_ms": 4111.99,
+  "mean_keyword_hit_rate_proxy": 0.0,
+  "methodology": "Keyword presence and embedding semantic-support heuristics are proxies, not validated factual accuracy. Review answers manually. Model errors may be returned as text by legacy generate_answer.",
+  "results": [
+    {
+      "question": "What is artificial intelligence?",
+      "answer": "I don't have enough information in the retrieved context to answer that question.",
+      "refused": true,
+      "keyword_hit_rate_proxy": 0.0,
+      "semantic_support_check": false,
+      "retrieval_ms": 214.34,
+      "generation_ms": 13957.52,
+      "total_ms": 14523.49
+    },
+    {
+      "question": "What is machine learning?",
+      "answer": "I don't have enough information in the retrieved context to answer that question.",
+      "refused": true,
+      "keyword_hit_rate_proxy": 0.0,
+      "semantic_support_check": false,
+      "retrieval_ms": 31.84,
+      "generation_ms": 5644.16,
+      "total_ms": 5936.92
+    },
+    {
+      "question": "What is the capital of France?",
+      "answer": "I don't have enough information in the retrieved context to answer that question.",
+      "refused": true,
+      "keyword_hit_rate_proxy": 0.0,
+      "semantic_support_check": true,
+      "retrieval_ms": 33.2,
+      "generation_ms": 0.0,
+      "total_ms": 33.67
+    },
+    {
+      "question": "What is the Apollo program?",
+      "answer": "I don't have enough information in the retrieved context to answer that question.",
+      "refused": true,
+      "keyword_hit_rate_proxy": 0.0,
+      "semantic_support_check": true,
+      "retrieval_ms": 31.78,
+      "generation_ms": 0.0,
+      "total_ms": 32.38
+    },
+    {
+      "question": "What is photosynthesis?",
+      "answer": "I don't have enough information in the retrieved context to answer that question.",
+      "refused": true,
+      "keyword_hit_rate_proxy": 0.0,
+      "semantic_support_check": true,
+      "retrieval_ms": 32.95,
+      "generation_ms": 0.0,
+      "total_ms": 33.47
+    }
+  ]
+}

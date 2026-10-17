@@ -625,4 +625,26 @@
 ### The Week 4 tests demonstrate that the system can retrieve text chunks under selected topic filters. Further evaluation is needed to measure general retrieval quality and NER performance reliably.
 
 
+### Week 5 — Evaluation & FastAPI
 
+Implemented a FastAPI service for the existing RAG system, integrating ChromaDB retrieval, OpenRouter LLM generation, relevance checking, and hallucination detection.
+
+**Features**
+- REST endpoints: `GET /`, `GET /health`, and `POST /ask`
+- Structured JSON request logging
+- Input validation and HTTP error handling
+- Automated API testing using pytest
+- Retrieval evaluation using Precision@5 and pooled Recall@5
+- Generation evaluation and latency measurement
+
+**Evaluation Results**
+
+- FastAPI tests: 8/8 passed
+- Mean Precision@5: 0.16
+- Mean pooled Recall@5: 0.5556
+- Evaluation questions: 5
+- Retrieval candidate pool: 20 documents per question
+
+Recall is calculated against manually selected relevant documents in the candidate pool, not all relevant documents in the corpus. Relevance labels were initially selected from document previews and require full-document verification.
+
+Generation evaluation identified low semantic similarity scores for two generated responses and relevance-based refusals for three questions. Further investigation is needed to determine whether the similarity failures represent unsupported answers or limitations of the evaluation method.

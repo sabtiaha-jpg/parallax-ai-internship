@@ -1,0 +1,7 @@
+[
+  {"question": "What is artificial intelligence?", "expected_keywords": ["artificial", "intelligence"]},
+  {"question": "What is machine learning?", "expected_keywords": ["learning"]},
+  {"question": "What is the capital of France?", "expected_keywords": ["paris"]},
+  {"question": "What is the Apollo program?", "expected_keywords": ["apollo"]},
+  {"question": "What is photosynthesis?", "expected_keywords": ["photosynthesis"]}
+]

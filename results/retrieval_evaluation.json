@@ -1,0 +1,45 @@
+{
+  "k": 5,
+  "candidate_pool": 20,
+  "number_of_queries": 5,
+  "mean_precision_at_5": 0.16,
+  "mean_pooled_recall_at_5": 0.5555555555555555,
+  "note": "Recall denominator is manually judged relevant documents among top-20 candidates, NOT all corpus relevant documents. Null recalls excluded from mean.",
+  "queries": [
+    {
+      "question": "What is artificial intelligence?",
+      "precision_at_5": 0.2,
+      "pooled_recall_at_5": 0.5,
+      "relevant_in_pool": 2,
+      "hits": 1
+    },
+    {
+      "question": "What is machine learning?",
+      "precision_at_5": 0.4,
+      "pooled_recall_at_5": 0.6666666666666666,
+      "relevant_in_pool": 3,
+      "hits": 2
+    },
+    {
+      "question": "What is the capital of France?",
+      "precision_at_5": 0.0,
+      "pooled_recall_at_5": null,
+      "relevant_in_pool": 0,
+      "hits": 0
+    },
+    {
+      "question": "What is the Apollo program?",
+      "precision_at_5": 0.2,
+      "pooled_recall_at_5": 0.5,
+      "relevant_in_pool": 2,
+      "hits": 1
+    },
+    {
+      "question": "What is photosynthesis?",
+      "precision_at_5": 0.0,
+      "pooled_recall_at_5": null,
+      "relevant_in_pool": 0,
+      "hits": 0
+    }
+  ]
+}
