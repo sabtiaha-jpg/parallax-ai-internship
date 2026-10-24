@@ -1,3 +1,4 @@
+"""FastAPI endpoints and structured request logging for the Parallax RAG system."""
 
 import time
 import logging
@@ -5,9 +6,11 @@ import json
 import uuid
 from pathlib import Path
 from datetime import datetime, timezone
+from collections.abc import Awaitable, Callable
 
 from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel, Field
+from starlette.responses import Response
 
 from scripts.rag_pipeline import (
     retrieve_chunks,
@@ -58,6 +61,8 @@ REFUSAL = (
 # ============================================================
 
 class QuestionRequest(BaseModel):
+    """Validate incoming questions between 1 and 2,000 characters."""
+
     question: str = Field(min_length=1, max_length=2000)
 
 
@@ -66,7 +71,19 @@ class QuestionRequest(BaseModel):
 # ============================================================
 
 @app.middleware("http")
-async def log_requests(request: Request, call_next):
+async def log_requests(
+    request: Request,
+    call_next: Callable[[Request], Awaitable[Response]],
+) -> Response:
+    """Log request metadata and elapsed time as JSON lines.
+
+    Args:
+        request: Incoming HTTP request.
+        call_next: Passes the request to the next middleware or route.
+
+    Returns:
+        HTTP response with a unique X-Request-ID header.
+    """
     request_id = str(uuid.uuid4())
     start = time.perf_counter()
     status_code = 500
@@ -112,7 +129,8 @@ async def log_requests(request: Request, call_next):
 # ============================================================
 
 @app.get("/")
-def home():
+def home() -> dict[str, str]:
+    """Return the API welcome message and running status."""
     return {
         "message": "Welcome to Parallax AI RAG API",
         "status": "running"
@@ -124,7 +142,8 @@ def home():
 # ============================================================
 
 @app.get("/health")
-def health():
+def health() -> dict[str, str]:
+    """Return the service health status."""
     return {
         "status": "healthy"
     }
@@ -135,7 +154,22 @@ def health():
 # ============================================================
 
 @app.post("/ask")
-def ask_question(request: QuestionRequest):
+def ask_question(
+    request: QuestionRequest,
+) -> dict[str, str | list[str] | float]:
+    """Answer a question using retrieval-augmented generation.
+
+    Args:
+        request: Validated question from the JSON request body.
+
+    Returns:
+        The question, generated answer, source chunks, and latency in ms.
+
+    Raises:
+        HTTPException: 400 for whitespace-only questions or 500 for
+            unexpected processing failures. Invalid request schema
+            produces FastAPI's standard 422 response.
+    """
 
     start = time.perf_counter()
     question = request.question.strip()

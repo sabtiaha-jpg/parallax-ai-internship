@@ -1,19 +1,19 @@
 {
   "total_cases": 5,
   "successful_cases": 5,
-  "mean_total_ms": 4111.99,
-  "mean_keyword_hit_rate_proxy": 0.0,
+  "mean_total_ms": 2120.13,
+  "mean_keyword_hit_rate_proxy": 0.2,
   "methodology": "Keyword presence and embedding semantic-support heuristics are proxies, not validated factual accuracy. Review answers manually. Model errors may be returned as text by legacy generate_answer.",
   "results": [
     {
       "question": "What is artificial intelligence?",
-      "answer": "I don't have enough information in the retrieved context to answer that question.",
-      "refused": true,
-      "keyword_hit_rate_proxy": 0.0,
-      "semantic_support_check": false,
-      "retrieval_ms": 214.34,
-      "generation_ms": 13957.52,
-      "total_ms": 14523.49
+      "answer": "Based on the retrieved context, artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals. It is also the field of study in computer science that develops and studies intelligent machines. The term \"AI\" may also refer to the machines themselves.\n\nAI technology is widely used throughout industry, government, and science, with applications including advanced web search engines, recommendation systems, and support for robotics. AI research draws upon various fields including psychology, linguistics, philosophy, and neuroscience, and employs techniques such as artificial neural networks, statistical methods, formal logic, and mathematical optimization. Machine learning, particularly statistical machine learning in the 2010s, has become a dominant approach within AI research.",
+      "refused": false,
+      "keyword_hit_rate_proxy": 1.0,
+      "semantic_support_check": true,
+      "retrieval_ms": 156.32,
+      "generation_ms": 6383.49,
+      "total_ms": 6816.73
     },
     {
       "question": "What is machine learning?",
@@ -21,9 +21,9 @@
       "refused": true,
       "keyword_hit_rate_proxy": 0.0,
       "semantic_support_check": false,
-      "retrieval_ms": 31.84,
-      "generation_ms": 5644.16,
-      "total_ms": 5936.92
+      "retrieval_ms": 29.81,
+      "generation_ms": 3347.73,
+      "total_ms": 3686.67
     },
     {
       "question": "What is the capital of France?",
@@ -31,9 +31,9 @@
       "refused": true,
       "keyword_hit_rate_proxy": 0.0,
       "semantic_support_check": true,
-      "retrieval_ms": 33.2,
+      "retrieval_ms": 32.34,
       "generation_ms": 0.0,
-      "total_ms": 33.67
+      "total_ms": 32.75
     },
     {
       "question": "What is the Apollo program?",
@@ -41,9 +41,9 @@
       "refused": true,
       "keyword_hit_rate_proxy": 0.0,
       "semantic_support_check": true,
-      "retrieval_ms": 31.78,
+      "retrieval_ms": 29.44,
       "generation_ms": 0.0,
-      "total_ms": 32.38
+      "total_ms": 29.96
     },
     {
       "question": "What is photosynthesis?",
@@ -51,9 +51,9 @@
       "refused": true,
       "keyword_hit_rate_proxy": 0.0,
       "semantic_support_check": true,
-      "retrieval_ms": 32.95,
+      "retrieval_ms": 33.98,
       "generation_ms": 0.0,
-      "total_ms": 33.47
+      "total_ms": 34.52
     }
   ]
 }

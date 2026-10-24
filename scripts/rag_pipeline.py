@@ -1,3 +1,9 @@
+"""Retrieval-augmented question answering with ChromaDB and OpenRouter.
+
+This module retrieves Wikipedia chunks, checks retrieval relevance, generates
+context-grounded answers, and performs a semantic answer-support check.
+"""
+
 import os
 import time
 import logging
@@ -117,9 +123,15 @@ print(
 # RETRIEVAL
 # ============================================================
 
-def retrieve_chunks(query: str):
-    """
-    Retrieve the most relevant chunks from ChromaDB.
+def retrieve_chunks(query: str) -> tuple[list[str], list[float]]:
+    """Retrieve the top-K relevant Wikipedia chunks from ChromaDB.
+
+    Args:
+        query: The user's question to embed and search for.
+
+    Returns:
+        A pair containing retrieved chunk texts and their ChromaDB distances,
+        in matching order. Smaller distances indicate stronger similarity.
     """
 
     query_embedding = embedding_model.encode(
@@ -145,12 +157,15 @@ def retrieve_chunks(query: str):
 # RELEVANCE CHECK
 # ============================================================
 
-def check_relevance(distances):
-    """
-    Check whether the retrieved documents are relevant
-    enough to answer the user's question.
+def check_relevance(distances: list[float]) -> bool:
+    """Determine whether any retrieved chunk passes the distance threshold.
 
-    Smaller ChromaDB distances indicate greater similarity.
+    Args:
+        distances: Distances returned by ChromaDB for the retrieved chunks.
+
+    Returns:
+        True if the smallest distance is at most MAX_DISTANCE; otherwise False.
+        An empty sequence is considered irrelevant.
     """
 
     if not distances:
@@ -178,19 +193,20 @@ def check_relevance(distances):
 def hallucination_check(
     answer: str,
     documents: list[str],
-):
-    """
-    Check whether the generated answer is semantically
-    supported by the retrieved context.
+) -> bool:
+    """Check semantic similarity between an answer and retrieved context.
 
-    This uses the same SentenceTransformer embedding model
-    to compare the generated answer with each retrieved
-    document.
+    Uses normalized SentenceTransformer embeddings and the maximum cosine
+    similarity against individual chunks. Recognized refusal phrases pass.
+    This heuristic is not a guarantee of factual correctness.
 
-    This is an additional safety layer on top of:
-        1. Retrieval relevance checking
-        2. Strict system prompting
-        3. Context-only generation
+    Args:
+        answer: Generated answer or refusal text to evaluate.
+        documents: Retrieved chunks used to generate the answer.
+
+    Returns:
+        True for a recognized safe refusal or sufficiently similar answer;
+        otherwise False.
     """
 
     # --------------------------------------------------------
@@ -316,10 +332,15 @@ def hallucination_check(
 def generate_answer(
     query: str,
     documents: list[str],
-):
-    """
-    Send retrieved context to the LLM and generate
-    an answer using only that context.
+) -> str:
+    """Request a context-grounded answer from the OpenRouter LLM.
+
+    Args:
+        query: User's question.
+        documents: Retrieved text chunks included in the model prompt.
+
+    Returns:
+        Generated answer or a descriptive error message when the API fails.
     """
 
     # --------------------------------------------------------
@@ -532,7 +553,18 @@ Answer using ONLY the retrieved context.
 # RAG PIPELINE
 # ============================================================
 
-def rag_pipeline(query: str):
+def rag_pipeline(query: str) -> None:
+    """Execute the complete RAG flow and print the answer and timings.
+
+    Retrieves documents, checks relevance, generates an answer when appropriate,
+    verifies semantic support, and records stage latencies in the log.
+
+    Args:
+        query: User's question to answer using the local knowledge base.
+
+    Returns:
+        None. Results are printed and logged rather than returned.
+    """
 
     # --------------------------------------------------------
     # Start total timer

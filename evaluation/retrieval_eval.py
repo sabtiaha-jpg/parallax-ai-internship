@@ -22,7 +22,17 @@ POOL_SIZE = 20
 K = 5
 
 
-def search_ids(question: str, size: int) -> list[dict]:
+def search_ids(question: str, size: int) -> list[dict[str, str | float]]:
+    """Retrieve candidate document IDs and snippets for a question.
+
+    Args:
+        question: Natural-language query to embed and search for.
+        size: Maximum number of candidates to retrieve from ChromaDB.
+
+    Returns:
+        A list of dictionaries containing each document's ID, distance,
+        and a short preview of its text.
+    """
     embedding = rag.embedding_model.encode(question, convert_to_numpy=True, normalize_embeddings=True)
     result = rag.collection.query(
         query_embeddings=[embedding.tolist()], n_results=size,
@@ -37,10 +47,18 @@ def search_ids(question: str, size: int) -> list[dict]:
 
 
 def prepare() -> None:
+    """Prepare an unlabeled top-20 candidate pool for human relevance review.
+
+    Reads evaluation questions and writes ``relevance_labels.json`` with
+    candidate document previews. Refuses to overwrite existing labels.
+
+    Raises:
+        SystemExit: If the label file already exists.
+    """
     if LABELS.exists():
         raise SystemExit(f"{LABELS} already exists. Move/rename it before regenerating to avoid losing labels.")
     questions = json.loads(QUESTIONS.read_text(encoding="utf-8"))
-    dataset = []
+    dataset: list[dict[str, object]] = []
     for case in questions:
         candidates = search_ids(case["question"], POOL_SIZE)
         dataset.append({"question": case["question"], "relevant_ids": None, "candidates": candidates})
@@ -49,10 +67,20 @@ def prepare() -> None:
 
 
 def evaluate() -> None:
+    """Calculate per-query and mean Precision@5 and pooled Recall@5.
+
+    Uses manually assigned relevant IDs from the top-20 candidate pool.
+    Queries with no relevant documents in that pool receive null recall
+    and are excluded from the mean pooled recall calculation.
+    Results are written to ``results/retrieval_evaluation.json``.
+
+    Raises:
+        SystemExit: If labels are missing, incomplete, or invalid.
+    """
     if not LABELS.exists():
         raise SystemExit("Run 'prepare' first, then manually label relevant_ids.")
     cases = json.loads(LABELS.read_text(encoding="utf-8"))
-    rows = []
+    rows: list[dict[str, object]] = []
     for case in cases:
         relevant = case.get("relevant_ids")
         if relevant is None:

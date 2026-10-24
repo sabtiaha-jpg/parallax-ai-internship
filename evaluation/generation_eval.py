@@ -8,6 +8,7 @@ import json
 import statistics
 import time
 from pathlib import Path
+from typing import Any
 from scripts import rag_pipeline as rag
 
 INPUT = Path("evaluation/questions.json")
@@ -15,7 +16,22 @@ OUTPUT = Path("results/generation_evaluation.json")
 REFUSAL = "I don't have enough information in the retrieved context to answer that question."
 
 
-def evaluate_case(case):
+def evaluate_case(case: dict[str, Any]) -> dict[str, Any]:
+    """Evaluate one question through retrieval, generation, and safety checks.
+
+    Args:
+        case: Test case containing a ``question`` and optional
+            ``expected_keywords`` list.
+
+    Returns:
+        A dictionary containing the answer, refusal and semantic-support
+        indicators, keyword-hit-rate proxy, and latency measurements in ms.
+
+    Note:
+        Keyword matches and semantic support are heuristic signals, not
+        verified factual correctness. For irrelevant retrieval, generation
+        is skipped and the standard refusal is returned.
+    """
     question = case["question"]
     start = time.perf_counter()
     retrieval_start = time.perf_counter()
@@ -43,7 +59,14 @@ def evaluate_case(case):
             "total_ms": round((time.perf_counter() - start) * 1000, 2)}
 
 
-def main():
+def main() -> None:
+    """Run all configured test cases and save a JSON evaluation report.
+
+    Reads ``evaluation/questions.json`` and writes
+    ``results/generation_evaluation.json``. Each case is evaluated
+    independently, so a failed case is recorded without ending the run.
+    The report includes per-case results and averages for successful cases.
+    """
     cases = json.loads(INPUT.read_text(encoding="utf-8"))
     rows = []
     for case in cases:
